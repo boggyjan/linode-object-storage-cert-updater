@@ -1,0 +1,16 @@
+export default {
+  cron: '* * * 1 * *',
+  apiToken: 'Fill your API token (create at https://cloud.linode.com/profile/tokens)',
+  certs: [
+    {
+      region: 'jp-osa-1',
+      bucket: 'static.abc.com',
+      certPath: '/etc/letsencrypt/live/static.abc.com'
+    },
+    {
+      region: 'jp-osa-1',
+      bucket: 'static-2.abc.com',
+      certPath: '/etc/letsencrypt/live/static-2.abc.com'
+    }
+  ]
+}

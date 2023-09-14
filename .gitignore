@@ -1,3 +1,7 @@
+pm2.config.cjs
+updater.config.js
+.DS_Store
+
 # Logs
 logs
 *.log

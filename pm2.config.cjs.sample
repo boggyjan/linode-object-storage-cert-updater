@@ -1,0 +1,12 @@
+module.exports = {
+  apps: [
+    {
+      name: "LinodeObjectStorageCertUpdater",
+      script: "index.js",
+      watch: true,
+      // ignore_watch: [''],
+      env: {
+      }
+    }
+  ]
+}
