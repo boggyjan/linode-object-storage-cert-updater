@@ -61,7 +61,5 @@ function initCronJob () {
   console.log('[Success] CronJob started')
 }
 
-// init cron job
-// initCronJob()
-
-updater()
+// Init cron job
+initCronJob()
