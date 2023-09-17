@@ -35,7 +35,7 @@ function updater () {
     //       }' \
     //     https://api.linode.com/v4/object-storage/buckets/us-east-1/example-bucket/ssl
     try {
-      const certificate = fs.readFileSync(cert.certPath + '/cert.pem', 'utf8')
+      const certificate = fs.readFileSync(cert.certPath + '/fullchain.pem', 'utf8')
       const private_key = fs.readFileSync(cert.certPath + '/privkey.pem', 'utf8')
 
       await axios.post(
