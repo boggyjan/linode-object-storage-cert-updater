@@ -1,6 +1,7 @@
 export default {
-  cron: '* * * 1 * *',
   apiToken: 'Fill your API token (create at https://cloud.linode.com/profile/tokens)',
+  accessKey: 'Fill your AccessKey (create at https://cloud.linode.com/object-storage/access-keys)',
+  secretKey: 'Fill your SecretKey',
   certs: [
     {
       region: 'jp-osa-1',
