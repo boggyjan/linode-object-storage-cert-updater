@@ -13,5 +13,11 @@ export default {
       bucket: 'static-2.abc.com',
       certPath: '/etc/letsencrypt/live/static-2.abc.com'
     }
-  ]
+  ],
+
+  // [optional] (If you don't need telegram report, delete all content below)
+  // telegram bot token
+  telegramBotToken: '1234567890:ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  // my telegram ID
+  myTelegramId: '123456789'
 }
