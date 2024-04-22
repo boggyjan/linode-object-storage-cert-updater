@@ -6,13 +6,13 @@ import report from './telegramReporter.js'
 const domain = process.argv[2]
 const validation = process.argv[3]
 
-report(`[Linode Object Storage Cert Updater] Start to upload challenge for ${domain}`)
+await report(`[Linode Object Storage Cert Updater] Start to upload challenge for ${domain}`)
 
 const bucket = config.certs.find(cert => cert.bucket === domain)
 
 // 找不到對應的bucket就退出
 if (!bucket) {
-  report(`[Linode Object Storage Cert Updater] no bucket found`)
+  await report(`[Linode Object Storage Cert Updater] no bucket found`)
   process.exit()
 }
 
@@ -40,9 +40,9 @@ const params = {
 
 try {
   const result = await new Upload({ client, params }).done()
-  report(`[Linode Object Storage Cert Updater] challenge uploaded`)
+  await report(`[Linode Object Storage Cert Updater] challenge uploaded`)
   console.log('File uploaded:', result.Location)
 } catch {
-  report(`[Linode Object Storage Cert Updater] upload challenge failed.`)
+  await report(`[Linode Object Storage Cert Updater] upload challenge failed.`)
   console.log('File upload failed!')
 }
