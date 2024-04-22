@@ -6,7 +6,7 @@ import report from './telegramReporter.js'
 const domain = process.argv[2]
 const validation = process.argv[3]
 
-report(`[Linode Object Storage Cert Updater] Start to upload challenge for ${domain} with validation: ${validation}`)
+report(`[Linode Object Storage Cert Updater] Start to upload challenge for ${domain}`)
 
 const bucket = config.certs.find(cert => cert.bucket === domain)
 
@@ -40,7 +40,7 @@ const params = {
 
 try {
   const result = await new Upload({ client, params }).done()
-  report(`[Linode Object Storage Cert Updater] challenge uploaded: ${result.Location}`)
+  report(`[Linode Object Storage Cert Updater] challenge uploaded`)
   console.log('File uploaded:', result.Location)
 } catch {
   report(`[Linode Object Storage Cert Updater] upload challenge failed.`)

@@ -8,7 +8,7 @@ import report from './telegramReporter.js'
 const domain = process.argv[2]
 const validation = process.argv[3]
 
-report(`[Linode Object Storage Cert Updater] Start to remove challenge for ${domain} with validation: ${validation}`)
+report(`[Linode Object Storage Cert Updater] Start to remove challenge for ${domain}`)
 
 const bucket = config.certs.find(cert => cert.bucket === domain)
 
@@ -41,11 +41,10 @@ const command = new DeleteObjectCommand(input)
 
 try {
   const response = await client.send(command)
-  report(`[Linode Object Storage Cert Updater] challenge removed: ${result.Location}`)
+  report('[Linode Object Storage Cert Updater] challenge removed')
 } catch {
   report(`[Linode Object Storage Cert Updater] remove challenge failed.`)
 }
-
 
 // Update bucket certs
 report(`[Linode Object Storage Cert Updater] Start to remove old cert of ${domain}`)
