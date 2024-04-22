@@ -25,4 +25,4 @@ async function report (text) {
   }
 }
 
-export default { report }
+export default report
