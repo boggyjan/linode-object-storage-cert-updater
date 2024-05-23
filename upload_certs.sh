@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 echo "-------------- Upload Certs Begin ---------------"
 echo "Start upload certs by node.js"
