@@ -1,7 +1,7 @@
 # Installtion
 - git clone git@github.com:boggyjan/linode-object-storage-cert-updater.git
 - npm i
-- After you finished your first time ssl setup by certbot "manual" method. You have to update the auto-renewal config at /etc/letsencrypt/renewal/xxx.conf. Add three lines below after [renewalparams] block:
+- After you finished your first time ssl setup by certbot "manual" method. You have to update the auto-renewal config at /etc/letsencrypt/renewal/xxx.conf. Add four lines below after [renewalparams] block:
 ```
 server = https://acme-v02.api.letsencrypt.org/directory
 manual_auth_hook = /var/www/linode-object-storage-cert-updater/challenge_upload.sh
